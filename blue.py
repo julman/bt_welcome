@@ -1,9 +1,12 @@
 import bluetooth
 import time
-result = bluetooth.lookup_name('74:45:8A:C6:F2:0C', timeout=5)
-if(result != None):
-	print "im here!"
-else:
-	print "im not here :("
 
-
+import xml.etree.ElementTree as ET
+tree = ET.parse('macs.xml')
+root = tree.getroot()
+for child in root:
+		result = bluetooth.lookup_name(child.find("mac"), timeout=5)
+		if(result != None):
+			print child.find("name").text . "im here!"
+		else:
+			print "im not here :("
