@@ -1,16 +1,16 @@
 import bluetooth
 
-def get_name()
+def get_name():
 	name = input('Enter your name: ')
-	print('Hello', name)
+	print('Hello' + name)
 	return name
 
-def get_song()
-	song = input('Enter your name: ')
-	print('the song you chose is:', song)
+def get_song():
+	song = input('Enter your chosen song: ')
+	print('the song you chose is:' + song)
 	return song
 
-def put_in_xml(name, song, mac)
+def put_in_xml(name, song, mac):
 	tree = ET.parse('macs.xml')
 	root = tree.getroot()
 	newActorNode = ET.Element('actor')
