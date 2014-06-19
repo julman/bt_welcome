@@ -1,4 +1,6 @@
 import bluetooth
+from xml.etree.ElementTree import fromstring, ElementTree, Element
+import xml.etree.ElementTree as ET
 
 def get_name():
 	name = input('Enter your name: ')
@@ -32,10 +34,10 @@ def put_in_xml(name, song, mac):
 
 devices = bluetooth.discover_devices()
 if(len(devices)>1):
-	print "Only one device at a time, itches!"
+	print "Only one device at a time, bitches!"
 else:
 	if(len(devices)<1):
-		print "need at least one devices to be discoverable!"
+		print "Need at least one devices to be discoverable!"
 	else:
 
 		for discovered_address in devices:
