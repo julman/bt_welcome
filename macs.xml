@@ -1,8 +1,2 @@
-<?xml version="1.0" ?>
 <actors>
-		<name>Ultraman</name>
-		<mac>74:45:8A:C6:F2:0C</mac>
-		<modDT />
-		<mp3>sounds/hawaii.mp3</mp3>
-	</actor>
 </actors>

@@ -3,13 +3,13 @@ from xml.etree.ElementTree import fromstring, ElementTree, Element
 import xml.etree.ElementTree as ET
 
 def get_name():
-	name = input('Enter your name: ')
-	print('Hello' + name)
+	name = raw_input('Enter your name: ')
+	print('Hello ' + name+"!")
 	return name
 
 def get_song():
-	song = input('Enter your chosen song: ')
-	print('the song you chose is:' + song)
+	song = raw_input('Enter your chosen song: ')
+	print('the song you chose is: ' + song+"!")
 	return song
 
 def put_in_xml(name, song, mac):
