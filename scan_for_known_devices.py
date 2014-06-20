@@ -6,7 +6,9 @@ tree = ET.parse('macs.xml')
 root = tree.getroot()
 import subprocess
 for child in root:
-		result = bluetooth.lookup_name(child.find("mac").text, timeout=5)
+		print child.find("mac").text
+		result = bluetooth.lookup_name(child.find("mac").text, timeout = 5)
+		print result
 		if(result != None):
 			print child.find("name").text + (" is here!")
 			bashcommand = "mplayer " + child.find("mp3").text
